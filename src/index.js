@@ -153,7 +153,7 @@ prods.map((elem) => {
   button.className = "button";
   const basket = document.createElement("img");
   basket.className = "basket";
-  basket.src = "../assets/basket.png";
+  basket.src = "./basket.png";
   button.append(basket);
   button.onclick = () => {
     modal.style.display = "block";

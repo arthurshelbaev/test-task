@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header class="header_wrapper">
+      <div class="header">
+        <div class="logo">Logo</div>
+        <div class="filters"></div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="products"></div>
+    </main>
+    <div class="modal">
+      <div class="close">закрыть</div>
+      <div class="counter">
+        <div class="counter_message">Количество:</div>
+        <input class="input_counter" type="number" />
+      </div>
+      <div>
+        <div class="color">
+          <div class="color_messgae">Цвет:</div>
+          <form>
+            <input type="radio" name="color" id="color_1" />
+            <label for="color_1">Черный</label>
+            <input type="radio" name="color" id="color_2" />
+            <label for="color_2">Белый</label>
+          </form>
+        </div>
+        <div class="comment">
+          <div class="comment_message">Комментарий:</div>
+          <textarea class="comment_input" rows="5" type="text"></textarea>
+        </div>
+      </div>
+      <div class="modal_buy_case">
+        <button class="modal_buy">Купить</button>
+      </div>
+    </div>
+    <div class="arrow"></div>
+    <script src="index.js"></script>
+  </body>
+</html>

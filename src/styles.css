@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,500;1,200;1,300&display=swap');
+
+:root {
+    --var-body-bg: #fff;
+    --var-body-fc: #333;
+    --var-header-bg: #eee;
+}
+[dark] {
+    --var-body-bg: #333;
+    --var-body-fc: #fff;
+    --var-header-bg: #666;
+}
+
+body {
+    background-color: var(--var-body-bg);
+    color: var(--var-body-fc);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+.header_wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px;
+    background-color: var(--var-header-bg);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    box-shadow: 0 1px 5px black;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+    align-items: center;
+}
+.logo {
+    font-weight: 500;
+    font-size: 20px;
+}
+.filters {
+    width: max-content;
+    display: flex;
+    font-weight: 300;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.filter {
+    border: 0;
+}
+.main {
+    display: flex;
+    justify-content: center;
+}
+.products {
+    margin: 80px 0 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 80vw;
+}
+.product {
+    width: 250px;
+    height: 300px;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.image_case {
+    max-height: 200px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.image {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: contain;
+}
+.down_block {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    gap: 20px;
+}
+.title {
+    margin: 10px 0 10px;
+}
+.price {
+    margin: 10px 0 10px;
+}
+.button {
+    background-color: var(--var-body-bg);
+    border: 0;
+}
+.basket {
+    width: 30px;
+    cursor: pointer;
+}
+
+.modal {
+    border-radius: 10px;
+    display: none;
+    overflow: auto;
+    z-index: 1;
+    height: 55vh;
+    width: 25vw;
+    box-shadow: 0 0 15px 3px black;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--var-body-bg);
+}
+.close {
+    font-size: 5px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(186, 0, 0, 0.711);
+    font-size: 22px;
+    cursor: pointer;
+}
+.counter {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+.input_counter {
+    left: 0;
+    right: 0;
+    width: 10%;
+}
+.color {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 0;
+}
+.comment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+.comment_input {
+    width: 90%;
+}
+.modal_buy_case {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+.modal_buy {
+    background-color: rgba(78, 186, 0, 0.887);
+    font-size: 20px;
+    padding: 8px 25px;
+    border-radius: 10px;
+}
+.arrow {
+    display: none;
+    position: fixed;
+    border-top: 3px solid var(--var-body-fc);
+    border-right: 3px solid var(--var-body-fc);
+    transform: rotate(-45deg);
+    width: 20px;
+    height: 20px;
+    bottom: 40px;
+    right: 50px;
+    cursor: pointer;
+}
+
+input.apple-switch {
+  position: relative;
+  -webkit-appearance: none;
+  outline: none;
+  width: 42px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #D9DADC;
+  border-radius: 50px;
+  box-shadow: inset -20px 0 0 0 #fff;
+}
+
+input.apple-switch:after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  background: transparent;
+  width: 18px;
+  height: 17px;
+  border-radius: 50%;
+  box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
+}
+
+input.apple-switch:checked {
+  box-shadow: inset 20px 0 0 0 #4ed164;
+  border-color: #4ed164;
+}
+
+input.apple-switch:checked:after {
+  left: 20px;
+  box-shadow: -2px 4px 3px rgba(0,0,0,0.05);
+}
+
+
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --var-body-bg: #333;
+    --var-body-fc: #fff;
+    --var-header-bg: #666;
+  }
+} */
+
+@media all and (max-width: 988px) {
+    .products {
+        width: 90vw;
+    }
+}

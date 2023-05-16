@@ -133,7 +133,7 @@ body {
 .modal {
     border-radius: 10px;
     height: max-content;
-    width: 25vw;
+    width: 30vw;
     box-shadow: 0 0 15px 3px black;
     margin: 10% auto;
     background-color: var(--var-body-bg);
@@ -259,6 +259,9 @@ input.apple-switch:checked:after {
     .products {
         width: 100vw;
     }
+    .modal {
+        width: 40vw;
+    }
 }
 @media all and (min-width: 577px) and (max-width: 768px) {
     .header {
@@ -271,6 +274,9 @@ input.apple-switch:checked:after {
     }
     .products {
         width: 100vw;
+    }
+    .modal {
+        width: 50vw;
     }
 }
 @media all and (max-width: 700px) {
@@ -309,6 +315,9 @@ background-color: #4ed164;
     img {
         max-width: 150px;
     }
+    .modal {
+        width: 70vw;
+    }
 }
 @media all and (max-width: 380px) {
     .filters {
@@ -316,6 +325,9 @@ background-color: #4ed164;
     }
     .product {
         width: 160px;
+    }
+    .modal {
+        width: 80vw;
     }
     
 }   

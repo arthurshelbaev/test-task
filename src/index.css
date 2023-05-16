@@ -85,7 +85,7 @@ body {
     min-height: 200px;
     display: flex;
     justify-content: center;
-    background-color: white;
+    background-color: #fff;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -243,9 +243,59 @@ input.apple-switch:checked:after {
     --var-header-bg: #666;
   }
 } */
+/* 
 
-@media all and (max-width: 988px) {
+
+<576px Extra small ≥576px Small ≥768px Medium ≥992px Large ≥1200px Extra large
+*/
+@media all and (min-width: 769px) and (max-width: 992px) {
+    .header {
+        width: 80vw;
+        gap: 18px;
+    }
+    .filters {
+        justify-content: center;
+    }
     .products {
-        width: 90vw;
+        width: 100vw;
     }
 }
+@media all and (min-width: 577px) and (max-width: 768px) {
+    .header {
+        width: 90vw;
+        gap: 20px;
+    }
+    .filters {
+        justify-content: center;
+        gap: 5px 20px;
+    }
+    .products {
+        width: 100vw;
+    }
+}
+@media all and (max-width: 576px) {
+    .header {
+        width: 90vw;
+        gap: 20px;
+    }
+    .filters {
+        justify-content: center;
+        gap: 5px 20px;
+        font-size: 14px;
+    }
+    .products {
+        width: 100vw;
+        gap: 10px;
+    }
+    .product {
+        width: 180px;
+    }
+    img {
+        max-width: 150px;
+    }
+}
+@media all and (max-width: 364px) {
+    .filters {
+        font-size: 12px;
+    }
+}   

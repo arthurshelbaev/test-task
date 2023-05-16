@@ -6,7 +6,7 @@ const prods = [
     title: "iPhone 14 Max",
     price: 120000,
     image:
-      "https://remont-marino.ru/upload/iblock/570/iPhone%2014%20Pro-min.png",
+      "https://c.dns-shop.ru/thumb/st1/fit/500/500/fe8ea87e1cc00f90cfee61e30ab43923/a87566e1a761e1c090ea9f430097c6b7513f7dfffb8344890c6ee14ea956bd0f.jpg.webp",
   },
   {
     id: 2,
@@ -276,9 +276,14 @@ function select(className) {
 filter();
 
 const arrow = document.querySelector(".arrow");
-arrow.onclick = () => {
-  window.scroll(0, 0);
-};
+arrow.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  window.scrollBy({
+    top: -1000,
+    behavior: "smooth",
+  });
+});
 
 window.addEventListener("scroll", function () {
   if (pageYOffset >= 50) {

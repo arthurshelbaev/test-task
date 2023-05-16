@@ -273,6 +273,18 @@ input.apple-switch:checked:after {
         width: 100vw;
     }
 }
+@media all and (max-width: 700px) {
+    input.apple-switch {
+box-shadow: 0;
+    }
+input.apple-switch:after {
+width: 0;
+  height: 0;
+}
+input.apple-switch:checked {
+background-color: #4ed164;
+}
+}
 @media all and (max-width: 576px) {
     .header {
         width: 90vw;
@@ -286,16 +298,24 @@ input.apple-switch:checked:after {
     .products {
         width: 100vw;
         gap: 10px;
+        font-size: 12px;
+    }
+    .down_block {
+        gap: 10px;
     }
     .product {
-        width: 180px;
+        width: 186px;
     }
     img {
         max-width: 150px;
     }
 }
-@media all and (max-width: 364px) {
+@media all and (max-width: 380px) {
     .filters {
         font-size: 12px;
     }
+    .product {
+        width: 160px;
+    }
+    
 }   

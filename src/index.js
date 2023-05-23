@@ -121,8 +121,8 @@ const main = document.querySelector("main");
 const products = document.querySelector(".products");
 
 const modal = document.querySelector(".modal_wrapper");
-window.onclick = (e) => e.target == modal ? modal.style.display = "none" : null
-
+window.onclick = (e) =>
+  e.target == modal ? (modal.style.display = "none") : null;
 
 const close = document.querySelector(".close");
 close.onclick = () => {
@@ -217,8 +217,12 @@ all.textContent = "Все";
 all.dataset.id = "all";
 all.style.cursor = "pointer";
 all.style.fontWeight = "500";
-all.onmouseover = () => { all.style.textDecoration = "underline"}
-all.onmouseout = () => { all.style.textDecoration = "none"}
+all.onmouseover = () => {
+  all.style.textDecoration = "underline";
+};
+all.onmouseout = () => {
+  all.style.textDecoration = "none";
+};
 all.onclick = () => {
   all.style.fontWeight = "500";
 };
@@ -286,7 +290,7 @@ arrow.addEventListener("click", (e) => {
 });
 
 window.addEventListener("scroll", function () {
-  if (pageYOffset >= 50) {
+  if (pageYOffset >= 100) {
     arrow.style.display = "block";
   } else {
     arrow.style.display = "none";

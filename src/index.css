@@ -281,15 +281,17 @@ input.apple-switch:checked:after {
 }
 @media all and (max-width: 700px) {
     input.apple-switch {
-box-shadow: 0;
+        box-shadow: 0;
+        border: 1px solid #666;
     }
-input.apple-switch:after {
-width: 0;
-  height: 0;
-}
-input.apple-switch:checked {
-background-color: #4ed164;
-}
+    input.apple-switch:after {
+        width: 0;
+        height: 0;
+    }
+    input.apple-switch:checked {
+        background-color: #4ed164;
+        border-color: #333;
+    }
 }
 @media all and (max-width: 576px) {
     .header {

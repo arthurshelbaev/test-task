@@ -21,6 +21,7 @@ body {
     color: var(--var-body-fc);
     font-family: 'Montserrat', sans-serif;
     margin: 0;
+    user-select: none;
 }
 .header_wrapper {
     display: flex;

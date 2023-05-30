@@ -116,6 +116,7 @@ const prods = [
 //   const fetchProducts = data.products;
 
 let categories = [];
+let categories2 = [];
 
 const main = document.querySelector("main");
 const products = document.querySelector(".products");
@@ -228,8 +229,38 @@ all.onclick = () => {
 };
 list.prepend(all);
 
-function filter() {
-  list.addEventListener("click", (event) => {
+const elems = document.createElement("div");
+elems.className = "elems";
+
+const all2 = document.createElement("div");
+all2.textContent = "Все";
+all2.dataset.id = "all";
+all2.className = "el";
+elems.append(all2);
+
+prods.map((elem) => {
+  if (!categories2.includes(elem.category)) {
+    categories2.push(elem.category);
+    const el = document.createElement("div");
+    el.dataset.id =
+      elem.categoryId === 1
+        ? "devices"
+        : elem.categoryId === 2
+        ? "tech"
+        : "other";
+    el.textContent = elem.category;
+    el.className = "el";
+    elems.append(el);
+  }
+});
+
+const footer = document.createElement("footer");
+footer.className = "footer";
+footer.append(elems);
+document.body.append(footer);
+
+function filter(cats) {
+  cats.addEventListener("click", (event) => {
     const targetId = event.target.dataset.id;
     window.scroll(0, 0);
 
@@ -258,6 +289,7 @@ function filter() {
     }
   });
 }
+
 function filtered(className) {
   items.forEach((item) => {
     if (item.dataset.id === className) {
@@ -277,7 +309,9 @@ function select(className) {
     }
   });
 }
-filter();
+
+filter(list);
+filter(elems);
 
 const arrow = document.querySelector(".arrow");
 arrow.addEventListener("click", (e) => {

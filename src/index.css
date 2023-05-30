@@ -64,7 +64,7 @@ body {
     margin: 80px 0 20px 0;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     gap: 20px;
     width: 80vw;
@@ -74,7 +74,6 @@ body {
     height: 300px;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -236,6 +235,28 @@ input.apple-switch:checked:after {
   box-shadow: -2px 4px 3px rgba(0,0,0,0.05);
 }
 
+.footer {
+   display: flex;
+   justify-content: center;
+   position: relative;
+   bottom: 0;
+   margin: 100px 0 20px 0;
+}
+.elems {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 80%;
+    font-size: 14px;
+}
+.el {
+    font-weight: 300;
+}
+.el:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 /* @media (prefers-color-scheme: dark) {
   :root {
     --var-body-bg: #333;
@@ -244,7 +265,6 @@ input.apple-switch:checked:after {
   }
 } */
 /* 
-
 
 <576px Extra small ≥576px Small ≥768px Medium ≥992px Large ≥1200px Extra large
 */
@@ -319,6 +339,9 @@ input.apple-switch:checked:after {
     }
     .modal {
         width: 70vw;
+    }
+    .elems {
+        flex-wrap: wrap;
     }
 }
 @media all and (max-width: 380px) {

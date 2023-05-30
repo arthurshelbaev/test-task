@@ -2,6 +2,11 @@ const prods = [
   {
     id: 1,
     category: "Гаджеты и аксессуары",
+    date: new Date().toLocaleString("ru", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }),
     categoryId: 1,
     title: "iPhone 14 Max",
     price: 120000,
@@ -11,6 +16,11 @@ const prods = [
   {
     id: 2,
     category: "Гаджеты и аксессуары",
+    date: new Date().toLocaleString("ru", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }),
     categoryId: 1,
     title: "Macbook Pro 16",
     price: 140000,
@@ -20,6 +30,11 @@ const prods = [
   {
     id: 3,
     category: "Гаджеты и аксессуары",
+    date: new Date().toLocaleString("ru", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }),
     categoryId: 1,
     title: "MacBook Air",
     price: 80000,
@@ -29,6 +44,11 @@ const prods = [
   {
     id: 4,
     category: "Бытовая техника",
+    date: new Date().toLocaleString("ru", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }),
     categoryId: 2,
     title: "Стиральная машина Dexp",
     price: 36000,
@@ -38,6 +58,11 @@ const prods = [
   {
     id: 5,
     category: "Прочее",
+    date: new Date().toLocaleString("ru", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }),
     categoryId: 3,
     title: "Моноколесо Ninebot One-Z10",
     price: 140000,
@@ -47,6 +72,11 @@ const prods = [
   {
     id: 6,
     category: "Прочее",
+    date: new Date().toLocaleString("ru", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }),
     categoryId: 3,
     title: "Квадрокоптер DJI Mavic Mini",
     price: 100000,
@@ -56,6 +86,11 @@ const prods = [
   {
     id: 7,
     category: "Бытовая техника",
+    date: new Date().toLocaleString("ru", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }),
     categoryId: 2,
     title: "Кофемашина Polaris",
     price: 30000,
@@ -65,6 +100,11 @@ const prods = [
   {
     id: 8,
     category: "Гаджеты и аксессуары",
+    date: new Date().toLocaleString("ru", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }),
     categoryId: 1,
     title: "Смарт-часы Apple Watch SE",
     price: 28000,
@@ -74,6 +114,11 @@ const prods = [
   {
     id: 9,
     category: "Бытовая техника",
+    date: new Date().toLocaleString("ru", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }),
     categoryId: 2,
     title: "Холодильник Side by Side Aceline",
     price: 35000,
@@ -83,6 +128,11 @@ const prods = [
   {
     id: 10,
     category: "Прочее",
+    date: new Date().toLocaleString("ru", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }),
     categoryId: 3,
     title: "Электросамокат Ninebot",
     price: 55000,
@@ -92,6 +142,11 @@ const prods = [
   {
     id: 11,
     category: "Гаджеты и аксессуары",
+    date: new Date().toLocaleString("ru", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }),
     categoryId: 1,
     title: "Apple iPhone 12",
     price: 66000,
@@ -101,6 +156,11 @@ const prods = [
   {
     id: 12,
     category: "Бытовая техника",
+    date: new Date().toLocaleString("ru", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }),
     categoryId: 2,
     title: "Робот-пылесос iBoto Smart",
     price: 20500,
@@ -169,9 +229,13 @@ prods.map((elem) => {
   const imageCase = document.createElement("div");
   imageCase.className = "image_case";
   const image = document.createElement("img");
+  const imageBack = document.createElement("div");
+  imageBack.textContent = `Дата добавления: ${elem.date}`;
   image.className = "image";
+  imageBack.className = "image_back";
   image.src = elem.image;
   imageCase.append(image);
+  imageCase.append(imageBack);
   product.append(imageCase);
 
   const title = document.createElement("div");
